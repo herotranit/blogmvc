@@ -1,0 +1,11 @@
+body {
+    padding-top: 70px;
+	background-image: url(../images/anhnen1.jpg) ;
+	background-size:cover;
+}
+#container {
+
+	min-height: 100%;
+
+
+}
