@@ -3,7 +3,8 @@
 function adminCategorycontroller_list() {
 
 if(empty($_SESSION['username'])){
-	header("Location: http://localhost/blogtome/?c=admincontroller&m=login");
+	header("Locati
+        ;';';';'on: http://localhost/blogtome/?c=admincontroller&m=login");
             exit();
 }
     $data=array();
