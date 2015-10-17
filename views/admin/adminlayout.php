@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="styles/css/bootstrap-theme.css">
       <link rel="stylesheet" href="styles/css/style.css">
    </head>
-   <body style="background:#F8F8FF">
+   <body >
       <nav class="navbar navbar-default navbar-static-top" style="background:#DCDCDC5">
          <div class="container">
             <div class="navbar-header">

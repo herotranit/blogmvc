@@ -96,6 +96,25 @@ class post{
 
 
 
+	function getpostBycategory($category_id){
+
+
+		$data=array();
+		$sql="select * from post where category_id='".$category_id."'";
+		$query=mysql_query($sql);
+		if($query){
+			while($row=mysql_fetch_assoc($query)){
+				$data[]=$row;
+			}
+		}
+		return $data;
+
+
+
+	}
+
+
+
 
 
 

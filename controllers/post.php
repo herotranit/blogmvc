@@ -18,7 +18,6 @@ function post_list(){
 }
 
 
-
 function post_add(){
 
 	if(empty($_SESSION['username'])){
@@ -110,14 +109,24 @@ function post_update(){
 
 
 function post_home(){
-
 	$data=array();
 	$limit='3';
 	$data['posthome']=model('post')->getAllpost($limit);
 	$data['template_file']='website/post/postview.php';
 	render('website/layout.php',$data);
+}
 
 
+
+
+function post_bycategory(){
+	$data=array();
+	$category_id=$_GET['key'];
+	$data['category']=model('category')->category();
+	$data['category1']=model('category')->categoryByid($category_id);
+	$data['bycategory']=model('post')->getpostBycategory($category_id);
+	$data['template_file']='website/post/bycategory.php';
+	render('website/layout.php',$data);
 
 }
 

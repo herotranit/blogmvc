@@ -2,7 +2,7 @@
 function index_index(){
 	$data=array();
 
-	$limit=3;
+	$limit=2;
 	$limit2=5;	
 	$data['category']=model('category')->category();
 	$data['posthome']=model('post')->getAllpost($limit);

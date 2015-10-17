@@ -9,13 +9,13 @@ foreach ($datapost as $d) {
 <form class="form-horizontal" method="post" action="" role="form">
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="email">Tiêu Đề:</label>
-		<div class="col-sm-2">
+		<div class="col-sm-8">
 			<input type="text" name="title" class="form-control" value="<?php echo $d['title']; ?>">
 		</div>
 	</div>
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="email">Tóm Tắt:</label>
-		<div class="col-sm-2">
+		<div class="col-sm-8">
 			<input type="text" name="description" class="form-control" value="<?php echo $d['description']; ?>">
 		</div>
 	</div>
