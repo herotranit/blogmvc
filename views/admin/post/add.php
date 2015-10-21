@@ -25,7 +25,7 @@
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="email">Hình Ảnh:</label>
 		<div class="col-sm-2">
-			<input type="file" name="image"  >
+			<input type="file"  id="fileToUpload" name="fileToUpload">
 		</div>
 	</div>
 
@@ -66,7 +66,8 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-default">Thêm</button>
+				<button type="submit" class="btn btn-default" name="submit">Thêm</button>
+				<button type="reset" value="Huỷ" class="btn btn-default" >H</button>
 			</div>
 		</div>
 	</form>

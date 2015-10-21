@@ -16,9 +16,17 @@
           <ul class="nav navbar-nav">
       <?php 
       foreach ($category as $menu) {
-      ?>
-            <li><a  href="index.php?c=post&m=bycategory&key=<?php echo $menu['category_id']; ?>"><?php  echo $menu['category_name'];  ?></a></li>  
-      <?php 
+        if (isset($_GET['key'])) {
+      
+      ?>    
+            <li class="active"><a href="index.php?c=post&m=bycategory&key=<?php echo $menu['category_id']; ?>"><?php  echo $menu['category_name'];  ?></a></li>  
+            <?php }
+            else{
+             ?>
+
+            <li class=""><a href="index.php?c=post&m=bycategory&key=<?php echo $menu['category_id']; ?>"><?php  echo $menu['category_name'];  ?></a></li>
+      <?php
+      } 
       }
       ?>
           </ul>

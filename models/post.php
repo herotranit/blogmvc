@@ -81,8 +81,9 @@ class post{
 		$user_id=$postdata['user_id'];
 		$category_id=$postdata['category_id'];
 		$status=$postdata['status'];
+		$images=$postdata['images'];
 		$sql="update post set  
-		title='".$title."',description='".$description."',content='".$content."',user_id='".$user_id."',category_id='".$category_id."',status='".$status."'
+		title='".$title."',description='".$description."',content='".$content."',user_id='".$user_id."',category_id='".$category_id."',status='".$status."',images='".$images."'
 		where post_id='".$id."'";
 
 		$query=mysql_query($sql);
@@ -97,10 +98,24 @@ class post{
 
 
 	function getpostBycategory($category_id){
-
-
 		$data=array();
 		$sql="select * from post where category_id='".$category_id."'";
+		$query=mysql_query($sql);
+		if($query){
+			while($row=mysql_fetch_assoc($query)){
+				$data[]=$row;
+			}
+		}
+		return $data;
+
+
+
+	}
+
+
+	function getpostview($post_id){
+		$data=array();
+		$sql="select * from post where post_id='".$post_id."'";
 		$query=mysql_query($sql);
 		if($query){
 			while($row=mysql_fetch_assoc($query)){
