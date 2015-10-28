@@ -33,12 +33,15 @@
     foreach ($posthome1 as $k) {
       ?>
         <div class="panel-body" style="background-color:#F8F8FF">
-          <div class="col-md-4" style="background-image:url(./upload/Ronaldo.jpg);background-size:cover; height:90px;width:100px;">
+          <div class="col-md-4" >
+              <a href="index.php?c=post&m=">
+                  <img width=100 height=100 src="./<?php echo $k['images']; ?>"/>
+              </a>
           </div>
-          <div class="col-md-8"></div>
+          <div class="col-md-8">
                   <p style=" font-weight: bold;"><?php echo $k['title']; ?></p>
 
-            
+          </div>
         </div><br>
                 <?php } ?>
     </div >

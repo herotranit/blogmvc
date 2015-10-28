@@ -2,27 +2,32 @@
 
 <?php 
 foreach ($datapost as $d) {
-	# code...
-
 ?>
 
-<form class="form-horizontal" method="post" action="" role="form">
+<form class="form-horizontal" method="post" action="" role="form" enctype="multipart/form-data">
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="email">Tiêu Đề:</label>
 		<div class="col-sm-8">
-			<input type="text" name="title" class="form-control" value="<?php echo $d['title']; ?>">
+			<textarea type="text" name="title" class="form-control" value="" ><?php echo $d['title'];  ?></textarea> 
 		</div>
 	</div>
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="email">Tóm Tắt:</label>
 		<div class="col-sm-8">
-			<input type="text" name="description" class="form-control" value="<?php echo $d['description']; ?>">
+			<textarea type="text" name="description" class="form-control" value="" ><?php echo $d['description'];  ?></textarea>
 		</div>
 	</div>
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="email">Nội Dung:</label>
 		<div class="col-sm-9">
-			<textarea type="text" name="content" id="content" class="form-control" value="<?php echo $d['content']; ?>" ></textarea>
+			<textarea type="text" name="content" id="content" class="form-control" value="" ><?php echo $d['content'];  ?></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+
+		<label class="control-label col-sm-2" for="email">Hình Ảnh:</label>
+		<div class="col-sm-2">
+			<input type="file"  id="fileToUpload" name="fileToUpload">
 		</div>
 	</div>
 	<div class="form-group">

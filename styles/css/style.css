@@ -1,7 +1,7 @@
 body {
     padding-top: 70px;
 
-	background-color: #F8F8FF; 
+	background-color: #EEEEEE; 
 	background-size:cover;
 }
 #container {
@@ -28,5 +28,5 @@ h2{
 
 #panel-body{
 
-	background-color:#F8F8FF;
+	background-color:#222222;
 }

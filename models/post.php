@@ -53,8 +53,9 @@ class post{
 		$user_id=$postdata['user_id'];
 		$category_id=$postdata['category_id'];
 		$status=$postdata['status'];
-		$sql="insert into post(title,description,content,user_id,category_id,status) 
-		value('".$title."','".$description."','".$content."','".$user_id."','".$category_id."','".$status."')";
+		$images=$postdata['images'];
+		$sql="insert into post(title,description,content,user_id,category_id,status,images) 
+		value('".$title."','".$description."','".$content."','".$user_id."','".$category_id."','".$status."',images='".$images."')";
 
 		$query=mysql_query($sql);
 
@@ -83,7 +84,7 @@ class post{
 		$status=$postdata['status'];
 		$images=$postdata['images'];
 		$sql="update post set  
-		title='".$title."',description='".$description."',content='".$content."',user_id='".$user_id."',category_id='".$category_id."',status='".$status."',images='".$images."'
+		title='".$title."',content='".$content."',description='".$description."',user_id='".$user_id."',category_id='".$category_id."',status='".$status."',images='".$images."'
 		where post_id='".$id."'";
 
 		$query=mysql_query($sql);
