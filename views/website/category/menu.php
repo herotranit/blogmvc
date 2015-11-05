@@ -15,18 +15,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
       <?php 
-      foreach ($category as $menu) {
-        if (isset($_GET['key'])) {
-      
+      foreach ($category2 as $menu) {     
       ?>    
-            <li class="active"><a href="index.php?c=post&m=bycategory&key=<?php echo $menu['category_id']; ?>"><?php  echo $menu['category_name'];  ?></a></li>  
-            <?php }
-            else{
-             ?>
-
             <li class=""><a href="index.php?c=post&m=bycategory&key=<?php echo $menu['category_id']; ?>"><?php  echo $menu['category_name'];  ?></a></li>
       <?php
-      } 
       }
       ?>
           </ul>

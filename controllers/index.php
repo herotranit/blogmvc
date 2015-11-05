@@ -2,11 +2,19 @@
 function index_index(){
 	$data=array();
 
-	$limit=2;
-	$limit2=5;	
-	$data['category']=model('category')->category();
-	$data['posthome']=model('post')->getAllpost($limit);
-	$data['posthome1']=model('post')->getAllpost($limit2);
+	$limit=3;	
+	
+	$data['category2']=model('category')->category();
+	$category=model('category')->category();
+	$cats = array();
+	$category_id = array();
+	foreach ($category as &$c) {
+		$category_id = $c['category_id'];
+	    $c['post'] = model('post')->getposthome($category_id,$limit);
+	}
+	
+	//die();
+	$data['posthome']=$category;
 	$data['template_file']='website/post/home.php';
 	render('/website/layout.php',$data);
 

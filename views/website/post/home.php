@@ -1,49 +1,66 @@
-    
 
-<div class="col-md-8">
+
+<?php foreach ($posthome as $p) {
+
+  
+ ?>
+<div class="col-md-1"></div>
+<div class="col-md-10" style="border-bottom:1px solid #F8F8FF;">
   <?php 
-  foreach ($posthome as $k) {
-    ?>
-    <div class="panel panel-default">
-      
-        <h1 ><?php echo $k['title']; ?></h1>
+    foreach ($p['post'] as $key =>$pp) {
+    if($key==0){
+      # code... ?>
+<div class="col-md-4" style="border-right:1px solid #F8F8FF;">
+  <a href="index.php?c=post&m=bycategory&key=<?php echo $pp['category_id']; ?>&id=<?php echo $pp['post_id'];  ?>"> 
+    <img style="margin-top:15px;" width=250px height=200px src="<?php echo $pp['images']; ?>">
+  </a>
+ <h2> <a href="index.php?c=post&m=bycategory&key=<?php echo $pp['category_id']; ?>&id=<?php echo $pp['post_id'];  ?>"><?php  echo $pp['title']; ?></a></h2>
+</div>
+<?php } if($key!=0) {
+            if(isset($key)){
+  ?>
 
-
-    
-      <div class="panel-body">
-        <h4 style=" font-size:12px;opacity:0.6;"><?php echo $k['datetime']; ?></h4>
-        <h2 ><?php echo $k['description']; ?></h2>
-        <?php echo $k['content']; ?>
-        <br><br><br><br>
-      </div>
-    </div>
-    <?php } ?>
-  </div>
-
-  <div class="col-md-4">
-      
-
-
-      <div class="panel panel-default">
-        
-        
-          <h3 style="text-align:center;" >Bài Viết Mới Nhất</h3>
-
-            <?php 
-    foreach ($posthome1 as $k) {
-      ?>
-        <div class="panel-body" style="background-color:#F8F8FF">
-          <div class="col-md-4" >
-              <a href="index.php?c=post&m=">
-                  <img width=100 height=100 src="./<?php echo $k['images']; ?>"/>
+<div class="col-md-7">
+  <div class="panel-body">
+          <div class="col-md-3">
+              <a href="index.php?c=post&m=bycategory&key=<?php echo $pp['category_id']; ?>&id=<?php echo $pp['post_id'];  ?>" style="margin-top:10px" >
+                  <img height=100 width=100  src="<?php echo $pp['images']; ?>" />
               </a>
-          </div>
-          <div class="col-md-8">
-                  <p style=" font-weight: bold;"><?php echo $k['title']; ?></p>
 
+          </div>
+          <div class="col-md-7">
+                  <a href="index.php?c=post&m=bycategory&key=<?php echo $pp['category_id']; ?>&id=<?php echo $pp['post_id'];  ?>"><?php echo $pp['title'];?></a>
+                  <p><?php echo $pp['description'];?></p>
           </div>
         </div><br>
-                <?php } ?>
-    </div >
-    </div>
+</div>
+<?php } if(!isset($key)) {  echo "sdsad"; ?>     
+
+
+<div class="col-md-7">
+  <h1>sdfdsfdsf</h1>
+</div>
+
+
+
+
+      <?php } }   } ?>
+
+
+</div>
+
+<div class="clearfix"></div>
+
+<?php  } ?>
+      
+
+
+
+
+
+
+
+
+
+
 

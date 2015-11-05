@@ -131,6 +131,29 @@ class post{
 
 
 
+	function getposthome($category_id,$limit){
+		$data=array();
+		$sql="SELECT *
+			FROM post
+			INNER JOIN category
+			ON post.category_id=category.category_id
+			where category.category_id='".$category_id."' limit ".$limit."";
+			$query=mysql_query($sql);
+		if($query){
+			while($row=mysql_fetch_assoc($query)){
+				$data[]=$row;
+			}
+		}
+		return $data;
+
+
+
+
+	}
+
+
+
+
 
 
 

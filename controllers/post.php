@@ -208,7 +208,7 @@ function post_bycategory(){
 	$category_id=$_GET['key'];
 	$data['category1']=model('category')->categoryByid($category_id);
 	$data['bycategory']=model('post')->getpostBycategory($category_id);
-	$data['category']=model('category')->category();	
+	$data['category2']=model('category')->category();	
 	if(isset($_GET['id'])){
 		$post_id=$_GET['id'];
 		$data['postview']=model('post')->getpostview($post_id);
@@ -219,6 +219,7 @@ function post_bycategory(){
 	render('website/layout.php',$data);
 
 }
+
 
 
 

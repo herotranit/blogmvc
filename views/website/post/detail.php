@@ -18,15 +18,9 @@
       </div>
 
 
-      <div class="panel-body">
-        <h5> herotran@gmail.com</h5>
-        <h4 style=" font-size:12px;opacity:0.6;">12:25:56</h4>
-        <h5 >Đây là nội dung comment của tôi....</h5>
-        
-      </div>
 
-
-      <div class="fb-comments" data-href="https://www.facebook.com/hero.tran.1004" data-width="100%" data-numposts="5"></div>
+      <div class="form-group">
+      <div class="fb-comments" data-href="https://www.facebook.com/hero.tran.1004" data-width="auto" data-numposts="5"></div>
       <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -36,7 +30,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
+      </div>
 
 
 <!--
